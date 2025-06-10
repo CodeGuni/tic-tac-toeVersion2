@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.scoreboard {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+  color: #555;
+}
+
+.status {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 5px;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border: 2px solid #ddd;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.square:hover:not(:disabled) {
+  background: #f8f9fa;
+  border-color: #007bff;
+}
+
+.square:disabled {
+  cursor: not-allowed;
+}
+
+.square.x {
+  color: #007bff;
+}
+
+.square.o {
+  color: #dc3545;
+}
+
+.square.winning {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.new-game-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background 0.2s ease;
+}
+
+.new-game-button:hover {
+  background: #0056b3;
+}
+
+.move-history {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.move-history h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.move-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.move-history li {
+  margin: 5px 0;
+}
+
+.move-history button {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.move-history button:hover {
+  background: #e9ecef;
+  border-color: #007bff;
+}
+
+.move-history button.active-move {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
