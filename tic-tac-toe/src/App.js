@@ -81,7 +81,7 @@ function Game() {
 
   return (
     <div className="game-container">
-      <h1>Neon Tic-Tac-Toe</h1>
+      <h1>Sree Tic-Tac-Toe</h1>
       <div className="scoreboard">
         <span>X Wins: {scores.x}</span>
         <span>O Wins: {scores.o}</span>
